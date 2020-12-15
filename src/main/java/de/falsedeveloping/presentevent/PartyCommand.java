@@ -27,13 +27,8 @@ public class PartyCommand implements CommandExecutor {
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
     if (!(sender instanceof Player)) return true;
     Player p = (Player) sender;
-    p.sendMessage("Command issued");
-    p.sendMessage(String.valueOf(plugin.getConfiguration().getDouble("radius")));
-    p.sendMessage(String.valueOf(plugin.getConfiguration().getInt("number_of_gifts")));
-    p.sendMessage(String.valueOf(plugin.getConfiguration().getInt("delay_between_gifts") * 1000));
     List<Location> locations =
         SelectedArea.getRandomLocations(p.getLocation(), p.getLocation().getY() - 50, (float) plugin.getConfiguration().getDouble("radius"), plugin.getConfiguration().getInt("number_of_gifts"));
-    //TODO: fix
     new Thread(
             () -> locations.forEach(
                 location -> {
