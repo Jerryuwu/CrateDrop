@@ -1,0 +1,19 @@
+
+X
+java:S1117g"=Rename "itemStack" which hides the field declared at line 25.(Ê§Ìÿÿÿÿÿ
+o
+java:S3012J"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Áıã¶
+X
+java:S1117k"=Rename "itemStack" which hides the field declared at line 25.(²ï™şÿÿÿÿÿ
+T
+java:S1117‡"=Rename "itemStack" which hides the field declared at line 25.(ÕÏÿ¾
+S
+java:S1117_"=Rename "itemStack" which hides the field declared at line 25.(ÁÙê¹
+X
+java:S1117o"=Rename "itemStack" which hides the field declared at line 25.(ûñ®‘øÿÿÿÿ
+S
+java:S1117s"=Rename "itemStack" which hides the field declared at line 25.(€Ğ
+S
+java:S1117;"=Rename "itemStack" which hides the field declared at line 25.(€¦
+K
+java:S1874_"5Remove this use of "setDurability"; it is deprecated.(ÁÙê¹

@@ -1,0 +1,20 @@
+#Present-items:
+items:
+  - ITEM_1
+  - ITEM_2
+  - ITEM_3
+  - ITEM_4
+  - ITEM_5
+#   ITEM#AMOUNT
+present1:
+  - DIRT#16
+  - COBBLESTONE#8
+  - SAND#8
+  - GRAVEL#8
+  - QUARTZ#4
+  - IRON_INGOT#2
+
+radius: 5
+number_of_gifts: 10
+#in secs
+delay_between_drops: 5

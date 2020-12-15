@@ -1,0 +1,10 @@
+main: de.falsedeveloping.presentevent.Main
+name: PresentEvent
+version: 1.0.0
+description: A plugin for an Event
+api-version: 1.13
+author: Jerry
+
+commands:
+  party:
+    description: ....
