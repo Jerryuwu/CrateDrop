@@ -7,52 +7,51 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import java.io.File;
 
 public class Main extends JavaPlugin {
 
-    private PresentItem presentItem;
-    private FileConfiguration config;
-    private SelectedArea selectedArea;
-    private ItemInPresent itemInPresent;
-    private PartyCommand partyCommand;
+  private PresentItem presentItem;
+  private FileConfiguration config;
+  private SelectedArea selectedArea;
+  private ItemInPresent itemInPresent;
+  private PartyCommand partyCommand;
 
-    @Override
-    public void onEnable() {
-        PluginManager pm = getServer().getPluginManager();
-        getCommand("party").setExecutor(new PartyCommand(this));
-        pm.registerEvents(new PresentItem(this), this);
+  @Override
+  public void onEnable() {
+    PluginManager pm = getServer().getPluginManager();
+    getCommand("party").setExecutor(new PartyCommand(this));
+    pm.registerEvents(new PresentItem(this), this);
 
-
-        File configFile = new File(getDataFolder(), "config.yml");
-        if (!configFile.exists()) {
-            configFile.getParentFile().mkdirs();
-            saveResource("config.yml", false);
-        }
-        config = YamlConfiguration.loadConfiguration(configFile);
-        presentItem = new PresentItem(this);
-        selectedArea = new SelectedArea();
-        itemInPresent = new ItemInPresent(this);
-        partyCommand = new PartyCommand(this);
+    File configFile = new File(getDataFolder(), "config.yml");
+    if (!configFile.exists()) {
+      configFile.getParentFile().mkdirs();
+      saveResource("config.yml", false);
     }
+    config = YamlConfiguration.loadConfiguration(configFile);
+    presentItem = new PresentItem(this);
+    selectedArea = new SelectedArea();
+    itemInPresent = new ItemInPresent(this);
+    partyCommand = new PartyCommand(this);
+  }
 
+  public PresentItem getPresentItem() {
+    return presentItem;
+  }
 
-    public PresentItem getPresentItem() {
-        return presentItem;
-    }
+  public FileConfiguration getConfiguration() {
+    return config;
+  }
 
-    public FileConfiguration getConfiguration() {
-        return config;
-    }
+  public SelectedArea getSelectedArea() {
+    return selectedArea;
+  }
 
-    public SelectedArea getSelectedArea() {
-        return selectedArea;
-    }
-    public ItemInPresent getItemInPresent() {
-        return itemInPresent;
-    }
-    public PartyCommand getPartyCommand() {
-        return partyCommand;
-    }
+  public ItemInPresent getItemInPresent() {
+    return itemInPresent;
+  }
+
+  public PartyCommand getPartyCommand() {
+    return partyCommand;
+  }
 }
