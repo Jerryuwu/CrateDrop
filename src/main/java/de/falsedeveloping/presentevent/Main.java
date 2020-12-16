@@ -13,7 +13,6 @@ public class Main extends JavaPlugin {
 
   private PresentItem presentItem;
   private FileConfiguration config;
-  private SelectedArea selectedArea;
   private ItemInPresent itemInPresent;
   private PartyCommand partyCommand;
 
@@ -30,7 +29,6 @@ public class Main extends JavaPlugin {
     }
     config = YamlConfiguration.loadConfiguration(configFile);
     presentItem = new PresentItem(this);
-    selectedArea = new SelectedArea();
     itemInPresent = new ItemInPresent(this);
     partyCommand = new PartyCommand(this);
   }
@@ -41,10 +39,6 @@ public class Main extends JavaPlugin {
 
   public FileConfiguration getConfiguration() {
     return config;
-  }
-
-  public SelectedArea getSelectedArea() {
-    return selectedArea;
   }
 
   public ItemInPresent getItemInPresent() {

@@ -17,6 +17,7 @@ dependencies {
 task copyPluginToTestserver(dependsOn: ['build'], type: Copy) {
     from "${buildDir}/libs"
     into "C:\\Users\\jerom\\Desktop\\Spigotserver\\plugins"
+    into "export"
 }
 compileJava {
     sourceCompatibility = '1.8'
