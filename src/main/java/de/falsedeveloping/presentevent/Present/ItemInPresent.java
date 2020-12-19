@@ -18,7 +18,7 @@ public class ItemInPresent {
 
   public ItemStack item() {
     List<String> items = plugin.getConfiguration().getStringList("present1");
-    List<ItemStack> itemstacks =
+    List<ItemStack> itemstack =
         items.stream()
             .map(
                 item ->
@@ -27,6 +27,6 @@ public class ItemInPresent {
                         .build())
             .collect(Collectors.toList());
     Random rand = new Random();
-    return itemstacks.get(rand.nextInt(itemstacks.size()));
+    return itemstack.get(rand.nextInt(itemstack.size()));
   }
 }
