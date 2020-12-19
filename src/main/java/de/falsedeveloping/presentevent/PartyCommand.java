@@ -27,6 +27,7 @@ public class PartyCommand implements CommandExecutor {
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
     if (!(sender instanceof Player)) return true;
     Player p = (Player) sender;
+    if (!(p.hasPermission("party.party"))) return true;
     List<Location> locations =
         SelectedArea.getRandomLocations(p.getLocation(), p.getLocation().getY() - 50, (float) plugin.getConfiguration().getDouble("radius"), plugin.getConfiguration().getInt("number_of_gifts"));
     new Thread(
@@ -51,7 +52,7 @@ public class PartyCommand implements CommandExecutor {
                                 new InstantFirework(fireworkEffect, location);
                               });
                     try {
-                        Thread.sleep(plugin.getConfiguration().getInt("delay_between_gifts") * 1000);
+                        Thread.sleep(plugin.getConfiguration().getInt("delay_between_drops") * 1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

@@ -13,3 +13,5 @@ o
 ?src/main/java/de/falsedeveloping/presentevent/PartyCommand.java,0\1\0195b8a78fcbf4672d1a16aefdee8fb31c9e5a72
 t
 Dsrc/main/java/de/falsedeveloping/presentevent/misc/SelectedArea.java,e\4\e437ccd36bfab6ca0a033ea1c45e5fd2e5fb8ed1
+w
+Gsrc/main/java/de/falsedeveloping/presentevent/misc/InstantFirework.java,7\e\7e766eca4d36bc01a819833280e0d2c59d63f535
